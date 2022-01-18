@@ -28,7 +28,11 @@ class _loadingState extends State<loading> {
 
   @override
   Widget build(BuildContext context) {
-
+Map search = ModalRoute.of(context)?.settings.arguments as Map;
+if(search.isNotEmpty ?? false)
+{
+  city = search['searchText'];
+}
 
 
     return Scaffold(
